@@ -729,8 +729,9 @@ h1 span {
   }
 
   .visual-card h2 {
-    font-size: 25px;
-  }
+  font-size: 22px;
+  line-height: 1.35;
+}
 
   .section {
     padding: 68px 0;
