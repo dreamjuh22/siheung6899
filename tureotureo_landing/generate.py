@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+"""Generate regional static HTML pages. Run: python3 generate.py"""
+import json
+from pathlib import Path
+from html import escape
+ROOT = Path(__file__).resolve().parent
+areas = json.loads((ROOT / "data/areas.json").read_text(encoding="utf-8"))["areas"]
+out = ROOT / "areas"
+out.mkdir(exist_ok=True)
+for a in areas:
+    title = f"{a['keyword']} | 뚜러뚜러하수구"
+    links = "".join(f'<a href="{escape(x["slug"])}.html">{escape(x["name"])}</a>' for x in areas if x["slug"] != a["slug"])
+    html = f'''<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{escape(a['description'], quote=True)}"><meta name="theme-color" content="#102b46"><title>{escape(title)}</title><link rel="stylesheet" href="../styles.css"><script defer src="../script.js"></script></head>
+<body><a class="skip-link" href="#main">본문 바로가기</a><header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html"><span class="brand-mark">뚫</span><span><strong>뚜러뚜러하수구</strong><small>배관 문제, 원인부터 확인합니다</small></span></a><nav class="desktop-nav"><a href="../index.html#services">서비스</a><a href="../index.html#cases">시공 사례</a><a href="../index.html#areas">서비스 지역</a></nav><a class="button button-small" data-phone-link href="#contact">전화 상담</a></div></header>
+<main id="main"><section class="area-hero"><div class="container"><p class="breadcrumb"><a href="../index.html">홈</a> / {escape(a['city'])} / {escape(a['name'])}</p><p class="eyebrow">LOCAL DRAIN SERVICE</p><h1>{escape(a['keyword'])}<br>막힘·역류·배관 세척 상담</h1><p>{escape(a['description'])} 배수가 느려지거나 물이 역류한다면 막힌 위치와 배관 상태를 먼저 확인하는 것이 중요합니다.</p><a class="button" data-phone-link href="#contact">전화로 상담하기 ↗</a></div></section>
+<section class="area-content"><div class="container"><h2>{escape(a['name'])} 하수구 문제, 어떤 점을 확인해야 할까요?</h2><p>싱크대나 바닥 배수구의 물이 천천히 빠지는지, 여러 배수구에서 동시에 문제가 나타나는지, 사용하지 않을 때도 역류 흔적이 있는지 살펴보세요. 증상에 따라 개별 배수관 문제인지 공용 또는 메인 배관 문제인지 확인이 필요할 수 있습니다.</p><p>고압세척은 모든 막힘에 무조건 적용하는 방식이 아닙니다. 배관 재질과 상태, 막힘 위치, 접근 가능한 점검구 등을 고려해 작업 방법을 결정해야 합니다. 상담 시 지역, 건물 유형, 발생 증상을 알려주시면 상황 파악에 도움이 됩니다.</p><div class="area-callout"><strong>시공 사례를 추가해 주세요</strong><p>이 페이지는 지역별 페이지 생성을 위한 기본 템플릿입니다. 실제 게시 전 이 지역에서 진행한 작업 사진, 확인된 막힘 원인, 사용 장비, 작업 결과를 추가하고 사실과 다른 사례나 성과를 기재하지 마세요.</p></div><h2>자주 확인하는 증상</h2><ul><li>싱크대·세면대·바닥 배수구의 배수 지연</li><li>화장실이나 세탁실 배수구의 역류</li><li>여러 배수구에서 동시에 발생하는 배수 문제</li><li>배관 점검 또는 고압세척이 필요한 상황</li></ul><h2>다른 서비스 지역</h2><div class="area-links">{links}</div><p style="margin-top:24px"><a href="../index.html">← 뚜러뚜러하수구 대표 페이지로</a></p></div></section><section class="contact-section" id="contact"><div class="container contact-inner"><div><p class="eyebrow">CONTACT</p><h2>{escape(a['name'])} 배수 문제 상담</h2><p>증상과 건물 유형을 알려주시면 상담에 도움이 됩니다.</p></div><div class="contact-action"><a class="button" data-phone-link href="#contact">전화 상담 연결</a><p id="phone-status">전화번호 설정 후 상담 버튼이 활성화됩니다.</p></div></div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand" href="../index.html"><span class="brand-mark">뚫</span><span><strong>뚜러뚜러하수구</strong><small>배관 문제, 원인부터 확인합니다</small></span></a><div class="footer-copy"><p>© <span id="year"></span> 뚜러뚜러하수구. All rights reserved.</p><p>전화번호·사업자 정보는 실제 정보로 직접 입력하세요.</p></div></div></footer></body></html>'''
+    (out / f"{a['slug']}.html").write_text(html, encoding="utf-8")
+print(f"Generated {len(areas)} regional pages in {out}")
