@@ -668,6 +668,10 @@ h1 span {
 
 /* 모바일 */
 @media (max-width: 620px) {
+  .visual-stamp {
+    display: none;
+  }
+
   .container {
     width: calc(100% - 32px);
   }
