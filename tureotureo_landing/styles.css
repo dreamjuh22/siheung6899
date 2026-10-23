@@ -758,21 +758,33 @@ h1 span {
     padding: 68px 0;
   }
 
-  .service-grid {
-    gap: 10px;
-  }
+.service-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
 
-  .service-card {
-    padding: 18px 14px;
-  }
+.service-card {
+  padding: 18px 16px;
+}
 
-  .service-card h3 {
-    font-size: 15px;
-  }
+.service-card h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
 
-  .service-card p {
-    font-size: 11px;
-  }
+.service-card p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.service-card i {
+  width: 44px;
+  height: 44px;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+
 
   .trust-grid {
     grid-template-columns: 1fr;
