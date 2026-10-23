@@ -801,7 +801,7 @@ h1 span {
     text-align: left;
   }
 }
-```
+
 @media (max-width: 620px) {
   .hero-visual {
     min-height: auto;
