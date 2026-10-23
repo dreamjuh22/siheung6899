@@ -798,11 +798,11 @@ img {
 /* 지역 / 유형 */
 
 .case-meta {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 
   color: var(--cyan);
 
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.45;
 
   font-weight: 800;
@@ -812,10 +812,10 @@ img {
 /* 사례 제목 */
 
 .case-content h3 {
-  margin-bottom: 12px;
+  margin-bottom: 0px;
 
   font-size: 23px;
-  line-height: 1.4;
+  line-height: 1.35;
 
   letter-spacing: -0.025em;
 
