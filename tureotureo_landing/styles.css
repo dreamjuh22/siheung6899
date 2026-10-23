@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/leetaewook/gmarket-sans-dynamic-subset/GmarketSans.css');
 
+
 :root {
   --navy: #102b46;
   --navy2: #183e5d;
@@ -12,13 +13,15 @@
   --line: #dce5eb;
 }
 
+
+/* 기본 */
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -38,6 +41,13 @@ h3,
   font-family: 'Gmarket Sans', 'Noto Sans KR', sans-serif;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -47,6 +57,7 @@ a {
   width: min(1160px, calc(100% - 40px));
   margin: auto;
 }
+
 
 /* 접근성 */
 .skip-link {
@@ -58,11 +69,17 @@ a {
   position: absolute;
   left: 10px;
   top: 10px;
+  padding: 10px 14px;
   background: #fff;
+  color: var(--navy);
   z-index: 99;
 }
 
-/* 헤더 */
+
+/* =========================
+   헤더
+========================= */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -73,64 +90,81 @@ a {
 }
 
 .header-inner {
-  height: 78px;
+  height: 92px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 28px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 13px;
-  background: var(--navy);
-  color: var(--cyan);
-  font-size: 22px;
-  font-weight: 900;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: #fff;
+  border: 2px solid var(--navy);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.brand strong,
-.brand small {
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 .brand strong {
-  font-size: 16px;
+  display: block;
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 900;
 }
 
 .brand small {
-  font-size: 10px;
-  color: var(--muted);
+  display: none;
 }
 
 .desktop-nav {
   display: flex;
-  gap: 28px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #455767;
+  gap: 38px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #354b5c;
 }
 
-/* 버튼 */
+.desktop-nav a {
+  transition: 0.2s;
+}
+
+.desktop-nav a:hover {
+  color: var(--blue);
+}
+
+
+/* =========================
+   버튼
+========================= */
+
 .button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  padding: 14px 22px;
-  border-radius: 11px;
+  padding: 16px 28px;
+  border-radius: 14px;
   background: var(--cyan);
   color: var(--navy);
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 900;
   transition: 0.2s;
 }
@@ -140,13 +174,31 @@ a {
 }
 
 .button-small {
-  padding: 10px 15px;
-  font-size: 12px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: #ffd52f;
+  color: #102b46;
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 5px 14px #00000014;
 }
 
-/* 메인 히어로 */
+.button-small:hover {
+  background: #ffca0a;
+}
+
+
+/* =========================
+   메인 히어로
+========================= */
+
 .hero {
-  background: linear-gradient(120deg, #0c243b, #123654 62%, #1c4d6a);
+  background: linear-gradient(
+    120deg,
+    #0c243b,
+    #123654 62%,
+    #1c4d6a
+  );
   color: #fff;
   padding: 82px 0 90px;
   overflow: hidden;
@@ -154,17 +206,17 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.08fr 0.92fr;
   align-items: center;
-  gap: 60px;
+  gap: 70px;
 }
 
 .eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.15em;
+  font-size: 14px;
+  letter-spacing: 0.08em;
   font-weight: 900;
   color: var(--blue);
-  margin: 0 0 15px;
+  margin: 0 0 17px;
 }
 
 .hero .eyebrow,
@@ -173,17 +225,10 @@ a {
   color: var(--cyan);
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-
 h1 {
-  font-size: clamp(38px, 5vw, 62px);
-  line-height: 1.2;
-  letter-spacing: -0.06em;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.18;
+  letter-spacing: -0.055em;
   margin-bottom: 22px;
   font-weight: 900;
 }
@@ -193,7 +238,7 @@ h1 span {
 }
 
 .hero-lead {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.9;
   color: #d6e5ed;
 }
@@ -201,24 +246,28 @@ h1 span {
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 22px;
-  margin-top: 28px;
+  gap: 24px;
+  margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .text-link {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 800;
   color: #fff;
 }
 
 .hero-note {
-  font-size: 11px;
+  font-size: 12px;
   color: #a9c1cf;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
-/* 메인 오른쪽 비주얼 */
+
+/* =========================
+   메인 오른쪽 비주얼 카드
+========================= */
+
 .hero-visual {
   position: relative;
   min-height: 360px;
@@ -227,34 +276,25 @@ h1 span {
 }
 
 .visual-card {
-  width: min(100%, 350px);
-  padding: 34px;
+  width: min(100%, 380px);
+  padding: 30px;
   border: 1px solid #b9e6ee55;
   border-radius: 25px;
-  background: linear-gradient(145deg, #ffffff26, #ffffff08);
+  background: linear-gradient(
+    145deg,
+    #ffffff26,
+    #ffffff08
+  );
   box-shadow: 0 25px 70px #0003;
 }
 
-/* 기존 아이콘 - 현재는 사용하지 않아도 됨 */
-.visual-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 17px;
-  display: grid;
-  place-items: center;
-  background: var(--cyan);
-  color: var(--navy);
-  font-size: 40px;
-  font-weight: 900;
-}
-
-/* 작업 사진 */
 .visual-photo {
-  width: 86px;
-  height: 86px;
+  width: 78px;
+  height: 78px;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  background: #fff;
 }
 
 .visual-photo img {
@@ -264,62 +304,51 @@ h1 span {
   display: block;
 }
 
-/* 기존 영문 문구 - DRAIN · PIPE · CLEANING 삭제 시 사용 안 함 */
-.visual-kicker {
-  font-size: 9px;
-  letter-spacing: 0.16em;
-  color: #a9dce4;
-  margin: 24px 0 8px;
+.visual-card h2 {
+  font-size: 24px;
+  line-height: 1.38;
+  letter-spacing: -0.035em;
+  margin-bottom: 18px;
 }
 
-.visual-card h2 {
-  font-size: 28px;
-  line-height: 1.4;
+.visual-card h2 span {
+  white-space: nowrap;
 }
 
 .visual-line {
   height: 1px;
   background: #ffffff33;
+  margin-top: 10px;
 }
 
 .visual-tags {
   display: flex;
-  gap: 8px;
-  margin-top: 16px;
+  gap: 9px;
+  margin-top: 18px;
+  flex-wrap: wrap;
 }
 
 .visual-tags span {
-  padding: 5px 10px;
-  border-radius: 20px;
+  padding: 8px 13px;
+  border-radius: 999px;
   background: #ffffff1a;
-  font-size: 10px;
+  color: #f0fbff;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
+/* 안산·시흥 스탬프 삭제 */
 .visual-stamp {
-  position: absolute;
-  right: 0;
-  bottom: 18px;
-  padding: 15px 19px;
-  border-radius: 13px;
-  background: var(--cyan);
-  color: var(--navy);
-  transform: rotate(4deg);
+  display: none;
 }
 
-.visual-stamp strong,
-.visual-stamp span {
-  display: block;
-}
 
-.visual-stamp strong {
-  font-size: 14px;
-}
+/* =========================
+   작업 흐름 01 / 02 / 03
+========================= */
 
-.visual-stamp span {
-  font-size: 10px;
-}
-
-/* 작업 흐름 */
 .trust-strip {
   background: #edf4f7;
   border-bottom: 1px solid var(--line);
@@ -328,41 +357,104 @@ h1 span {
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 24px 0;
+  padding: 18px 0;
   gap: 18px;
 }
 
-.trust-grid > div {
+.trust-item {
+  display: grid;
+  grid-template-columns: auto 82px 1fr;
+  align-items: center;
+  gap: 14px;
+  padding-right: 18px;
+  border-right: 1px solid #d5e1e7;
+}
+
+.trust-item:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.trust-item b {
+  font-size: 32px;
+  line-height: 1;
+  color: #9ab7c6;
+}
+
+.trust-thumb {
+  width: 82px;
+  height: 56px;
+  border-radius: 11px;
+  overflow: hidden;
+  background: #dce9ee;
+  box-shadow: 0 7px 18px #102b4614;
+}
+
+.trust-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trust-item span {
+  min-width: 0;
+}
+
+.trust-item strong,
+.trust-item small {
+  display: block;
+}
+
+.trust-item strong {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.trust-item small {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+
+/* 기존 trust 구조를 사용해도 깨지지 않도록 */
+.trust-grid > div:not(.trust-item) {
   display: flex;
   align-items: center;
   gap: 15px;
   border-right: 1px solid #d5e1e7;
 }
 
-.trust-grid > div:last-child {
-  border: 0;
+.trust-grid > div:not(.trust-item):last-child {
+  border-right: 0;
 }
 
-.trust-grid b {
-  font-size: 26px;
+.trust-grid > div:not(.trust-item) b {
+  font-size: 28px;
   color: #9ab7c6;
 }
 
-.trust-grid strong,
-.trust-grid small {
+.trust-grid > div:not(.trust-item) strong,
+.trust-grid > div:not(.trust-item) small {
   display: block;
 }
 
-.trust-grid strong {
-  font-size: 13px;
+.trust-grid > div:not(.trust-item) strong {
+  font-size: 14px;
 }
 
-.trust-grid small {
+.trust-grid > div:not(.trust-item) small {
   font-size: 11px;
   color: var(--muted);
 }
 
-/* 공통 섹션 */
+
+/* =========================
+   공통 섹션
+========================= */
+
 .section {
   padding: 95px 0;
 }
@@ -385,7 +477,11 @@ h1 span {
   font-size: 14px;
 }
 
-/* 서비스 */
+
+/* =========================
+   서비스
+========================= */
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -429,7 +525,11 @@ h1 span {
   margin-bottom: 0;
 }
 
-/* 시공 사례 */
+
+/* =========================
+   시공 사례
+========================= */
+
 .section-dark {
   background: #0d2338;
   color: #fff;
@@ -459,7 +559,11 @@ h1 span {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background: linear-gradient(135deg, #204760, #102b46);
+  background: linear-gradient(
+    135deg,
+    #204760,
+    #102b46
+  );
   color: #b4d5df;
 }
 
@@ -473,7 +577,6 @@ h1 span {
   font-size: 11px;
 }
 
-/* 실제 시공 사진 */
 .case-photo {
   height: 205px;
   overflow: hidden;
@@ -489,7 +592,6 @@ h1 span {
 .case-content {
   padding: 22px;
 }
-
 
 .case-meta {
   font-size: 10px;
@@ -516,7 +618,11 @@ h1 span {
   margin-top: 18px;
 }
 
-/* 서비스 지역 */
+
+/* =========================
+   서비스 지역
+========================= */
+
 .area-panel {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -560,9 +666,17 @@ h1 span {
   margin-top: 13px;
 }
 
-/* 상담 영역 */
+
+/* =========================
+   상담 영역
+========================= */
+
 .contact-section {
-  background: linear-gradient(115deg, #1a5876, #102b46);
+  background: linear-gradient(
+    115deg,
+    #1a5876,
+    #102b46
+  );
   color: #fff;
   padding: 55px 0;
 }
@@ -593,7 +707,11 @@ h1 span {
   margin: 10px 0 0;
 }
 
-/* 푸터 */
+
+/* =========================
+   푸터
+========================= */
+
 .site-footer {
   padding: 28px 0;
   background: #091b2b;
@@ -617,10 +735,18 @@ h1 span {
   margin: 2px 0;
 }
 
-/* 지역 페이지 */
+
+/* =========================
+   지역 페이지
+========================= */
+
 .area-hero {
   padding: 65px 0;
-  background: linear-gradient(120deg, #0c243b, #1c4d6a);
+  background: linear-gradient(
+    120deg,
+    #0c243b,
+    #1c4d6a
+  );
   color: #fff;
 }
 
@@ -676,7 +802,11 @@ h1 span {
   color: #ffe0a6 !important;
 }
 
-/* 모바일 */
+
+/* ==================================================
+   모바일
+================================================== */
+
 @media (max-width: 620px) {
 
   /* 공통 */
@@ -691,20 +821,28 @@ h1 span {
 
   /* 헤더 */
   .header-inner {
-    height: 68px;
+    height: 72px;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 9px;
   }
 
   .brand-mark {
-    width: 37px;
-    height: 37px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border-width: 1.5px;
   }
 
   .brand strong {
     font-size: 14px;
+    line-height: 1.2;
   }
 
   .brand small {
-    font-size: 9px;
+    display: none;
   }
 
   .desktop-nav {
@@ -712,8 +850,9 @@ h1 span {
   }
 
   .button-small {
-    padding: 9px 11px;
+    padding: 10px 13px;
     font-size: 11px;
+    border-radius: 11px;
   }
 
 
@@ -725,6 +864,11 @@ h1 span {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .hero .eyebrow {
+    font-size: 12px;
+    margin-bottom: 14px;
   }
 
   .hero h1 {
@@ -742,17 +886,30 @@ h1 span {
     word-break: keep-all;
   }
 
+  .hero-actions {
+    gap: 16px;
+  }
+
+  .hero-actions .button {
+    padding: 14px 19px;
+    font-size: 14px;
+  }
+
+  .text-link {
+    font-size: 12px;
+  }
+
+  .hero-note {
+    font-size: 10px;
+  }
+
   .hero-visual {
     min-height: auto;
     margin-top: 10px;
   }
 
 
-  /* 메인 비주얼 카드 */
-  .visual-stamp {
-    display: none;
-  }
-
+  /* 모바일 비주얼 카드 */
   .visual-card {
     width: 100%;
     max-width: 320px;
@@ -778,12 +935,14 @@ h1 span {
   .visual-card h2 {
     grid-column: 2;
     grid-row: 1;
-
     font-size: 19px;
     line-height: 1.35;
     margin: 0;
-
     word-break: keep-all;
+  }
+
+  .visual-card h2 span {
+    white-space: normal;
   }
 
   .visual-line {
@@ -798,19 +957,49 @@ h1 span {
   }
 
   .visual-tags span {
-    padding: 4px 8px;
-    font-size: 8px;
+    padding: 5px 9px;
+    font-size: 9px;
+  }
+
+  .visual-stamp {
+    display: none;
   }
 
 
-  /* 작업 흐름 01 / 02 / 03 */
+  /* 01 / 02 / 03 */
   .trust-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+    padding: 18px 0;
   }
 
-  .trust-grid > div {
-    border: 0;
+  .trust-item {
+    grid-template-columns: 40px 70px 1fr;
+    gap: 11px;
+    padding: 8px 0;
+    border-right: 0;
+  }
+
+  .trust-item b {
+    font-size: 25px;
+  }
+
+  .trust-thumb {
+    width: 70px;
+    height: 48px;
+    border-radius: 9px;
+  }
+
+  .trust-item strong {
+    font-size: 13px;
+  }
+
+  .trust-item small {
+    font-size: 10px;
+  }
+
+  .trust-grid > div:not(.trust-item) {
+    border-right: 0;
   }
 
 
@@ -884,7 +1073,7 @@ h1 span {
   }
 
 
-  /* 상담 영역 */
+  /* 상담 */
   .contact-inner {
     align-items: flex-start;
     flex-direction: column;
