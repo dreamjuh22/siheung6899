@@ -651,21 +651,6 @@ h1 span {
   color: #ffe0a6 !important;
 }
 
-/* 태블릿 */
-@media (max-width: 850px) {
-  .hero-grid {
-    gap: 25px;
-  }
-
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .case-grid {
-    gap: 12px;
-  }
-}
-
 /* 모바일 */
 @media (max-width: 620px) {
   .visual-stamp {
@@ -720,18 +705,39 @@ h1 span {
   }
 
   .hero-visual {
-    min-height: 310px;
+    min-height: auto;
+    margin-top: 10px;
   }
 
   .visual-card {
-    width: 280px;
-    padding: 27px;
+    width: 100%;
+    max-width: 300px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .visual-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    margin-bottom: 14px;
   }
 
   .visual-card h2 {
-  font-size: 22px;
-  line-height: 1.35;
-}
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .visual-tags {
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .visual-tags span {
+    padding: 4px 8px;
+    font-size: 8px;
+  }
 
   .section {
     padding: 68px 0;
@@ -799,42 +805,5 @@ h1 span {
 
   .footer-copy {
     text-align: left;
-  }
-}
-
-@media (max-width: 620px) {
-  .hero-visual {
-    min-height: auto;
-    margin-top: 10px;
-  }
-
-  .visual-card {
-    width: 100%;
-    max-width: 320px;
-    padding: 22px;
-    border-radius: 20px;
-  }
-
-  .visual-photo {
-    width: 72px;
-    height: 72px;
-    border-radius: 14px;
-    margin-bottom: 16px;
-  }
-
-  .visual-card h2 {
-    font-size: 21px;
-    line-height: 1.35;
-    margin-bottom: 18px;
-  }
-
-  .visual-tags {
-    gap: 6px;
-    margin-top: 14px;
-  }
-
-  .visual-tags span {
-    padding: 5px 9px;
-    font-size: 9px;
   }
 }
