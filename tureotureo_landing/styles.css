@@ -462,9 +462,23 @@ h1 span {
   font-size: 11px;
 }
 
+/* 실제 시공 사진 */
+.case-photo {
+  height: 205px;
+  overflow: hidden;
+}
+
+.case-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .case-content {
   padding: 22px;
 }
+
 
 .case-meta {
   font-size: 10px;
@@ -799,10 +813,11 @@ h1 span {
     grid-template-columns: 1fr;
   }
 
-  .photo-placeholder {
-    height: 185px;
-  }
-
+ .photo-placeholder,
+.case-photo {
+  height: 185px;
+}
+  
   .area-panel {
     grid-template-columns: 1fr;
   }
