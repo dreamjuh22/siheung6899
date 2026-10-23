@@ -721,9 +721,15 @@ h1 span {
     gap: 30px;
   }
 
-  .hero h1 {
-    font-size: 42px;
-  }
+ .hero h1 {
+  font-size: 36px;
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+}
+
+  .hero h1 span {
+  white-space: nowrap;
+}
 
   .hero-lead {
     font-size: 14px;
