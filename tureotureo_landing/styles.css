@@ -533,8 +533,11 @@ img {
 /* 하단 하늘색 이름표 */
 .service-image-label {
   position: absolute;
-  left: 17px;
+
+  left: 50%;
   bottom: 16px;
+  transform: translateX(-50%);
+
   z-index: 3;
 
   padding: 8px 12px;
@@ -551,8 +554,8 @@ img {
   font-weight: 900;
 
   white-space: nowrap;
+  text-align: center;
 }
-
 
 /* 기존 서비스 카드가 혹시 남아 있을 때 */
 .service-grid {
