@@ -103,59 +103,44 @@ img {
 
 .header-inner {
   height: 82px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 30px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-
   gap: 11px;
 }
 
 .brand-mark {
   width: 50px;
   height: 50px;
-
   flex: 0 0 50px;
-
   border-radius: 12px;
-
   overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: #fff;
 }
 
 .brand-mark img {
   width: 100%;
   height: 100%;
-
   object-fit: contain;
-
   display: block;
 }
 
 .brand strong {
   display: block;
-
   font-size: 24px;
   line-height: 1;
-
   font-weight: 900;
-
   letter-spacing: -0.035em;
-
   white-space: nowrap;
-
   color: var(--ink);
 }
 
@@ -169,12 +154,9 @@ img {
 .desktop-nav {
   display: flex;
   align-items: center;
-
   gap: 44px;
-
   font-size: 16px;
   font-weight: 700;
-
   color: var(--ink);
 }
 
@@ -193,17 +175,12 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   padding: 13px 19px;
-
   border-radius: 9px;
-
   background: var(--yellow);
   color: #142c3e;
-
   font-size: 15px;
   font-weight: 900;
-
   transition: 0.2s;
 }
 
@@ -212,21 +189,14 @@ img {
   transform: translateY(-1px);
 }
 
-
-/* 기존 button-small 호환 */
-
 .button-small {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   padding: 13px 19px;
-
   border-radius: 9px;
-
   background: var(--yellow);
   color: #142c3e;
-
   font-size: 15px;
   font-weight: 900;
 }
@@ -238,7 +208,6 @@ img {
 
 .hero {
   position: relative;
-
   min-height: 570px;
 
   background-image: url('./images/hero-bg.webp');
@@ -247,7 +216,6 @@ img {
   background-repeat: no-repeat;
 
   color: #fff;
-
   overflow: hidden;
 }
 
@@ -268,9 +236,7 @@ img {
 .hero-inner {
   position: relative;
   z-index: 2;
-
   min-height: 570px;
-
   display: flex;
   align-items: center;
 }
@@ -285,19 +251,13 @@ img {
 .hero-location {
   display: inline-flex;
   align-items: center;
-
   padding: 9px 15px;
-
   margin-bottom: 17px;
-
   border-radius: 8px;
-
   background: var(--yellow);
   color: #173149;
-
   font-size: 15px;
   line-height: 1;
-
   font-weight: 800;
 }
 
@@ -306,12 +266,9 @@ img {
 
 .hero h1 {
   margin-bottom: 23px;
-
   font-size: clamp(46px, 5vw, 67px);
   line-height: 1.16;
-
   letter-spacing: -0.055em;
-
   font-weight: 900;
 }
 
@@ -320,27 +277,23 @@ img {
 }
 
 
-/* 히어로 설명 */
+/* 설명 */
 
 .hero-lead {
   margin-bottom: 0;
-
   font-size: 16px;
   line-height: 1.9;
-
   color: #dbe8ef;
 }
 
 
-/* 히어로 버튼 */
+/* 버튼 */
 
 .hero-actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
   gap: 12px;
-
   margin-top: 28px;
 }
 
@@ -348,18 +301,12 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-width: 145px;
-
   padding: 15px 20px;
-
   border-radius: 9px;
-
   font-size: 16px;
   line-height: 1;
-
   font-weight: 900;
-
   transition: 0.2s;
 }
 
@@ -384,19 +331,13 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   gap: 10px;
-
   padding: 15px 23px;
-
   border-radius: 10px;
-
   background: var(--cyan);
   color: var(--navy);
-
   font-size: 16px;
   font-weight: 900;
-
   transition: 0.2s;
 }
 
@@ -410,9 +351,7 @@ img {
 .hero-note {
   margin-top: 19px;
   margin-bottom: 0;
-
   font-size: 11px;
-
   color: #b4c8d4;
 }
 
@@ -422,17 +361,11 @@ img {
 .hero-grid {
   position: relative;
   z-index: 2;
-
   min-height: 570px;
-
   display: grid;
   grid-template-columns: 1fr;
-
   align-items: center;
 }
-
-
-/* 이전 오른쪽 카드 제거 */
 
 .hero-visual,
 .visual-card,
@@ -451,41 +384,29 @@ img {
 
 .section-heading {
   max-width: 720px;
-
   margin-bottom: 30px;
 }
 
 .section-heading h2,
 .contact-inner h2 {
   font-family: 'Gmarket Sans', 'Noto Sans KR', sans-serif;
-
   font-size: clamp(30px, 4vw, 42px);
   line-height: 1.27;
-
   letter-spacing: -0.05em;
-
   margin-bottom: 12px;
 }
 
 .section-heading > p:last-child {
   margin-bottom: 0;
-
   font-size: 14px;
-
   color: var(--muted);
 }
 
-
-/* 작은 파란 제목 */
-
 .section-kicker {
   margin-bottom: 7px;
-
   color: #2379a9;
-
   font-size: 15px;
   line-height: 1.3;
-
   font-weight: 900;
 }
 
@@ -493,17 +414,11 @@ img {
   color: var(--cyan);
 }
 
-
-/* 기존 eyebrow 호환 */
-
 .eyebrow {
   margin: 0 0 10px;
-
   color: var(--blue);
-
   font-size: 13px;
   letter-spacing: 0.08em;
-
   font-weight: 900;
 }
 
@@ -519,7 +434,6 @@ img {
 
 .services-section {
   background: #fff;
-
   padding-top: 68px;
   padding-bottom: 68px;
 }
@@ -528,34 +442,23 @@ img {
   margin-bottom: 25px;
 }
 
-
-/* 서비스 이미지 4분할 */
-
 .service-image-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 0;
-
   overflow: hidden;
-
   margin-top: 15px;
 }
 
 .service-image-card {
   position: relative;
-
   height: 310px;
-
   overflow: hidden;
-
   background: #132f48;
 }
 
 .service-image-card::after {
   content: '';
-
   position: absolute;
   inset: 0;
 
@@ -572,11 +475,8 @@ img {
 .service-image-card img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
-
   transition: transform 0.35s ease;
 }
 
@@ -584,17 +484,11 @@ img {
   transform: scale(1.035);
 }
 
-
-/* 서비스 하단 라벨 */
-
 .service-image-label {
   position: absolute;
-
   left: 50%;
   bottom: 16px;
-
   transform: translateX(-50%);
-
   z-index: 3;
 
   padding: 8px 12px;
@@ -608,72 +502,54 @@ img {
 
   font-size: 17px;
   line-height: 1.2;
-
   font-weight: 900;
 
   white-space: nowrap;
-
   text-align: center;
 }
 
 
-/* 기존 서비스 카드 호환 */
+/* 기존 카드 호환 */
 
 .service-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 15px;
 }
 
 .service-card {
   padding: 25px 22px;
-
   border: 1px solid var(--line);
-
   border-radius: 19px;
 }
 
 .service-card i {
   display: grid;
-
   place-items: center;
-
   width: 49px;
   height: 49px;
-
   margin-bottom: 23px;
-
   border-radius: 15px;
-
   background: #e8f7f8;
   color: #17617d;
-
   font-size: 29px;
-
   font-style: normal;
 }
 
 .service-card h3 {
   font-size: 17px;
-
   margin-bottom: 9px;
 }
 
 .service-card p {
   margin-bottom: 0;
-
   color: var(--muted);
-
   font-size: 12px;
   line-height: 1.9;
 }
 
 
-/* ==================================================
-   이전 01 / 02 / 03 영역
-================================================== */
+/* 이전 작업흐름 제거 */
 
 .trust-strip {
   display: none;
@@ -686,7 +562,6 @@ img {
 
 .section-dark {
   background: #0d2338;
-
   color: #fff;
 
   padding-top: 70px;
@@ -704,7 +579,6 @@ img {
 .section-dark .section-heading > p:last-child {
   font-size: 15px;
   line-height: 1.7;
-
   color: #b3c4d0;
 }
 
@@ -712,39 +586,25 @@ img {
   color: #b3c4d0;
 }
 
-
-/* 카드 그리드 */
-
 .case-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
 }
 
 .case-card {
   overflow: hidden;
-
   border: 1px solid #ffffff20;
-
   border-radius: 17px;
-
   background: #132f48;
 }
 
-
-/* 임시 사진 */
-
 .photo-placeholder {
   height: 205px;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   gap: 6px;
 
   background:
@@ -759,9 +619,7 @@ img {
 
 .photo-placeholder b {
   font-size: 30px;
-
   letter-spacing: 0.12em;
-
   opacity: 0.6;
 }
 
@@ -769,33 +627,24 @@ img {
   font-size: 11px;
 }
 
-
-/* 실제 사례 사진 */
-
 .case-photo {
   height: 205px;
-
   overflow: hidden;
 }
 
 .case-photo img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
-
-
-/* 사례 텍스트 */
 
 .case-content {
   padding: 22px 22px 24px;
 }
 
 
-/* 지역 / 유형 */
+/* 지역/유형 */
 
 .case-meta {
   margin-bottom: 4px;
@@ -809,10 +658,11 @@ img {
 }
 
 
-/* 사례 제목 */
+/* 제목 */
 
 .case-content h3 {
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 10px;
 
   font-size: 23px;
   line-height: 1.35;
@@ -827,7 +677,7 @@ img {
 }
 
 
-/* 사례 설명 */
+/* 설명 */
 
 .case-content > p:last-child {
   margin-bottom: 0;
@@ -842,9 +692,7 @@ img {
 
 .section-footnote {
   margin-top: 18px;
-
   color: #9eb3c1;
-
   font-size: 11px;
 }
 
@@ -855,60 +703,45 @@ img {
 
 .area-panel {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 18px;
 }
 
 .area-group {
   padding: 25px;
-
   border: 1px solid var(--line);
-
   border-radius: 17px;
 }
 
 .area-group h3 {
   margin-bottom: 15px;
-
   font-size: 17px;
 }
 
 .area-links {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 9px;
 }
 
 .area-links a {
   padding: 9px 12px;
-
   border: 1px solid var(--line);
-
   border-radius: 9px;
-
   background: var(--paper);
-
   font-size: 12px;
   font-weight: 700;
-
   transition: 0.2s;
 }
 
 .area-links a:hover {
   background: var(--navy);
-
   color: #fff;
 }
 
 .small-note {
   margin-top: 13px;
-
   color: var(--muted);
-
   font-size: 11px;
 }
 
@@ -932,23 +765,18 @@ img {
 
 .contact-inner {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 28px;
 }
 
 .contact-inner h2 {
   margin-bottom: 8px;
-
   font-size: 31px;
 }
 
 .contact-inner p:not(.eyebrow):not(.section-kicker) {
   color: #c4d7e1;
-
   font-size: 13px;
 }
 
@@ -956,10 +784,25 @@ img {
   text-align: center;
 }
 
-.contact-action p {
-  margin: 10px 0 0;
+.contact-action .button {
+  font-size: 17px;
+  padding: 16px 26px;
+}
 
-  font-size: 10px;
+
+/* 대표전화 강조 */
+
+#phone-status {
+  margin: 12px 0 0;
+
+  color: #fff !important;
+
+  font-size: 16px !important;
+  line-height: 1.4;
+
+  font-weight: 900;
+
+  letter-spacing: -0.02em;
 }
 
 
@@ -968,26 +811,20 @@ img {
 ================================================== */
 
 .site-footer {
-  padding: 28px 0;
-
+  padding: 30px 0;
   background: #091b2b;
-
   color: #fff;
 }
 
 .footer-inner {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 25px;
 }
 
 .site-footer .brand-mark {
   border: 0;
-
   background: #fff;
 }
 
@@ -998,13 +835,34 @@ img {
 .footer-copy {
   text-align: right;
 
-  color: #91a8b8;
+  color: #a9bdc9;
 
-  font-size: 10px;
+  font-size: 11px;
+  line-height: 1.7;
 }
 
 .footer-copy p {
   margin: 2px 0;
+}
+
+.footer-copy > p:first-child {
+  margin-bottom: 6px;
+
+  font-size: 11px;
+
+  color: #9db1be;
+}
+
+
+/* 새 2줄 사업자 정보 */
+
+.footer-info {
+  margin: 0;
+
+  color: #b9cbd5;
+
+  font-size: 12px;
+  line-height: 1.8;
 }
 
 
@@ -1031,15 +889,12 @@ img {
 
 .area-hero p:not(.eyebrow) {
   max-width: 720px;
-
   color: #d6e5ed;
 }
 
 .breadcrumb {
   margin-bottom: 18px;
-
   color: #a9c5d2;
-
   font-size: 12px;
 }
 
@@ -1053,16 +908,13 @@ img {
 
 .area-content h2 {
   margin-top: 30px;
-
   font-size: 26px;
-
   letter-spacing: -0.04em;
 }
 
 .area-content p,
 .area-content li {
   color: #516474;
-
   font-size: 14px;
   line-height: 1.9;
 }
@@ -1070,11 +922,8 @@ img {
 .area-callout,
 .area-case-empty {
   padding: 22px;
-
   border: 1px solid #d5edf0;
-
   border-radius: 14px;
-
   background: #edf7f8;
 }
 
@@ -1104,13 +953,10 @@ img {
   }
 
 
-  /* ==================================================
-     모바일 헤더
-  ================================================== */
+  /* 헤더 */
 
   .header-inner {
     height: 70px;
-
     gap: 9px;
   }
 
@@ -1121,9 +967,7 @@ img {
   .brand-mark {
     width: 40px;
     height: 40px;
-
     flex: 0 0 40px;
-
     border-radius: 9px;
   }
 
@@ -1139,22 +983,16 @@ img {
   .header-call,
   .button-small {
     padding: 11px 13px;
-
     border-radius: 9px;
-
     font-size: 12px;
-
     white-space: nowrap;
   }
 
 
-  /* ==================================================
-     모바일 히어로
-  ================================================== */
+  /* 히어로 */
 
   .hero {
     min-height: auto;
-
     background-position: 60% center;
   }
 
@@ -1170,18 +1008,14 @@ img {
 
   .hero-inner {
     min-height: auto;
-
     padding-top: 52px;
     padding-bottom: 58px;
-
     align-items: flex-start;
   }
 
   .hero-grid {
     min-height: auto;
-
     display: block;
-
     padding-top: 52px;
     padding-bottom: 58px;
   }
@@ -1192,22 +1026,16 @@ img {
 
   .hero-location {
     margin-bottom: 16px;
-
     padding: 8px 11px;
-
     border-radius: 7px;
-
     font-size: 12px;
   }
 
   .hero h1 {
     margin-bottom: 20px;
-
     font-size: 35px;
     line-height: 1.2;
-
     letter-spacing: -0.05em;
-
     word-break: keep-all;
   }
 
@@ -1218,7 +1046,6 @@ img {
   .hero-lead {
     font-size: 14px;
     line-height: 1.8;
-
     word-break: keep-all;
   }
 
@@ -1228,35 +1055,28 @@ img {
 
   .hero-actions {
     gap: 10px;
-
     margin-top: 24px;
   }
 
   .hero-button {
     min-width: 0;
-
     padding: 14px 17px;
-
     font-size: 14px;
   }
 
   .hero-actions .button {
     padding: 14px 17px;
-
     font-size: 14px;
   }
 
   .hero-note {
     margin-top: 18px;
-
     font-size: 10px;
     line-height: 1.6;
   }
 
 
-  /* ==================================================
-     모바일 서비스 영역
-  ================================================== */
+  /* 서비스 */
 
   .services-section {
     padding-top: 54px;
@@ -1269,51 +1089,38 @@ img {
 
   .section-kicker {
     margin-bottom: 7px;
-
     font-size: 13px;
   }
 
   .section-heading h2 {
     font-size: 29px;
     line-height: 1.28;
-
     letter-spacing: -0.04em;
-
     word-break: keep-all;
   }
 
   .section-heading > p:last-child {
     font-size: 13px;
     line-height: 1.75;
-
     word-break: keep-all;
   }
 
-
-  /* 서비스 2 × 2 */
-
   .service-image-grid {
     grid-template-columns: repeat(2, 1fr);
-
     gap: 9px;
-
     margin-top: 14px;
-
     overflow: visible;
   }
 
   .service-image-card {
     height: 205px;
-
     border-radius: 11px;
-
     overflow: hidden;
   }
 
   .service-image-card img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
   }
 
@@ -1339,9 +1146,7 @@ img {
   }
 
 
-  /* ==================================================
-     모바일 시공 사례
-  ================================================== */
+  /* 시공사례 */
 
   .section-dark {
     padding-top: 56px;
@@ -1363,7 +1168,6 @@ img {
 
   .case-grid {
     grid-template-columns: 1fr;
-
     gap: 14px;
   }
 
@@ -1377,16 +1181,15 @@ img {
   }
 
   .case-meta {
-    margin-bottom: 8px;
-
+    margin-bottom: 5px;
     font-size: 11px;
   }
 
   .case-content h3 {
     margin-bottom: 10px;
 
-    font-size: 17px;
-    line-height: 1.45;
+    font-size: 18px;
+    line-height: 1.4;
 
     word-break: keep-all;
   }
@@ -1394,18 +1197,14 @@ img {
   .case-content > p:last-child {
     font-size: 14px;
     line-height: 1.7;
-
     word-break: keep-all;
   }
 
 
-  /* ==================================================
-     모바일 지역
-  ================================================== */
+  /* 지역 */
 
   .area-panel {
     grid-template-columns: 1fr;
-
     gap: 12px;
   }
 
@@ -1423,26 +1222,21 @@ img {
 
   .area-links a {
     padding: 9px 11px;
-
     font-size: 12px;
   }
 
 
-  /* ==================================================
-     모바일 상담
-  ================================================== */
+  /* 상담 */
 
   .contact-inner {
     align-items: flex-start;
     flex-direction: column;
-
     gap: 22px;
   }
 
   .contact-inner h2 {
     font-size: 27px;
     line-height: 1.3;
-
     word-break: keep-all;
   }
 
@@ -1452,31 +1246,29 @@ img {
 
   .contact-action {
     width: 100%;
-
     text-align: left;
   }
 
   .contact-action .button {
     width: 100%;
-
     padding: 15px 18px;
-
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  .contact-action p {
-    font-size: 11px;
+  #phone-status {
+    margin-top: 12px;
+
+    font-size: 15px !important;
+
+    text-align: left;
   }
 
 
-  /* ==================================================
-     모바일 푸터
-  ================================================== */
+  /* 푸터 */
 
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;
-
     gap: 18px;
   }
 
@@ -1486,9 +1278,18 @@ img {
 
   .footer-copy {
     text-align: left;
-
     font-size: 10px;
-    line-height: 1.7;
+    line-height: 1.75;
+  }
+
+  .footer-copy > p:first-child {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .footer-info {
+    font-size: 11px;
+    line-height: 1.8;
   }
 
 }
